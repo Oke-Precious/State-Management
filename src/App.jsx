@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
 function App() {
-  const name = 'Precious';
+//   const name = 'Precious';
   const age = '120 years Old';
   const email = 'okepreciousab@gmail.com';
   const bestFood ='Garri'
-
+    const [name, setName] = useState('Precious')
   const design = {
     fontSize: '30px',
     padding : '20px',
@@ -38,6 +38,7 @@ function App() {
         <div style={design}>Attendance : {attendance}</div>
         <button onClick={handleClick}>Do not Click Me</button>
         <button onClick={changeAttendance}>Mark Attendance</button>
+        <button onClick={() => setName(name == 'Precious' ? 'Fatai' : 'Precious')}>Change name</button>
     </>
   )
   
